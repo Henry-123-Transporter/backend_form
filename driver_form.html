@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+    <!-- CSS -->
+
+    <style>
+
+    </style>
+    <title>Driver's license form</title>
+</head>
+<body>
+    <main>
+        <div class="container border border-secondary py-5 px-4">
+
+            <fieldset>
+                <legend>
+
+                    <h1 class="mb-4 text-center mb-5">ACHTUNG Fahrerinformationen</h1>
+                </legend>
+
+            <!-- [FORM]  -->
+            <form class="form text-secondary">
+                <!-- DRRIVERS' PERSONAL INFORMATION -->
+                <div class="d-flex justify-content-between mb-4">
+                    <h3>Persönliche Daten</h3>
+                    <!-- icon -->
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg></div>
+                </div>
+                    <hr class="mb-3">
+                    <!-- START: formfields -->
+                <section>
+                    <div class="form-row">
+                        <!-- <label for="sex">Anrede</label> -->
+                        <div class="col form-group mb-3">
+                            <select class="form-control custom-select" required>
+                              <option default>Anrede*</option>
+                              <option value="M">Herr</option>
+                              <option value="F">Frau</option>
+                            </select>
+                        </div>
+                        <!-- <div class="invalid-feedback">Example invalid custom select feedback</div> -->
+                        <!-- first name -->
+                        <div class="col form-group">
+                            <!-- <label for="f_name">Vorname</label> -->
+                            <input class="form-control" type="text" name="f_name" id="f_name" placeholder="Vorname*">
+                        </div>
+                        <!-- last name -->
+                        <div class="col form-group">
+
+                            <!-- <label for="l_name">Nachname</label> -->
+                            <input class="form-control" type="text" name="l_name" id="l_name" placeholder="Nachname*">
+                        </div>
+                    </div>
+
+                        <!-- birthdate -->
+                        <div class="form-group">
+                            <label for="birth_date">Geburtdatum</label>
+                            <input class="form-control" type="date" name="birth_date" id="birth_date">
+                        </div>
+
+                        <div class="form-row">
+                            <!-- country of birth -->
+                            <div class="col form-group">
+                                <label for="birth_country">Geburtsland</label>
+                                <select class="form-control" type="text" name="birth_country" id="birth_country">
+                                    <option value="austria" default>Österreich</option>
+                                    <option value="M">Anderes Land</option>
+                                </select>
+                            </div>
+                            <div class="col col-4 form-group">
+                                <label class="form" for="zip">PLZ</label>
+                                <input class="form-control" type="number" name="zip" id="zip">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- Address -->
+                            <div class="col form-group">
+                                <label for="street">Straße</label>
+                                <input class="form-control" type="text" name="street" id="street">
+                            </div>
+                            <div class="col col-3 form-group">
+                                <label class="form" for="house_no">Hausnummer</label>
+                                <input class="form-control" type="number" name="house_no" id="house_no">
+                            </div>
+                        </div>
+
+                        <!-- additional addresss information -->
+                        <div class="form-row">
+                            <div class="col col-12 form-group">
+                                <label for="extra_address">Addresszusatz</label>
+                                <input class="form-control" type="text" name="extra_address" id="extra_address">
+                            </div>
+                        </div>
+
+                        <hr class="mt-3">
+                </section>
+                <!-- END: formfields -->
+
+                <br><br>
+
+                <!-- --- LICENSE INFORMATION --- -->
+                <div class="d-flex justify-content-between mb-4">
+                    <h3>Führerschein Informationen</h3>
+                    <!-- icon -->
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+                        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                        <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+                      </svg></div>
+                </div>
+                    <hr class="mb-3">
+                
+                <!-- START: form fields -->
+                <section class="form-row">
+                    <!-- license nr. -->
+                    <div class="col col-6 mb-3">
+                        <label for="drivers_license_nr">Führerscheinnummer</label>
+                        <input class="form-control w-100" type="text" name="drivers_license_nr" id="drivers_license_nr" >
+                    </div>
+                    <!-- authority -->
+                    <div class="col col-6 mb-3">
+                        <label for="issuing_authority">Austellende Behörde</label>
+                        <input class="form-control w-100" type="text" name="issuing_authority" id="issuing_authority">
+                    </div>
+
+                    <!-- issuing date -->
+                    <div class="col col-6 mb-3">
+                        <label for="issuing_date">Austellungsdatum</label>
+                        <input class="form-control w-100" type="date" name="issuing_date" id="issuing_date">
+                    </div>
+                    <!-- expiration date  -->
+                    <div class="col col-6 mb-3">
+                        <label for="expiration_date">Ablaufdatum</label>
+                        <input class="form-control w-100" type="date" name="expiration_date" id="expiration_date">
+                    </div>
+
+                    <!-- checkbox -->
+                    <div class="col offset-6 col-6  mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="no_expiration_date" id="no_expiration_date" disabled>
+                            <label class="form-check-label" for="no_expiration_date">Der Führerschein hat kein Ablaufdatum</label>
+                        </div>
+                    </div>
+
+                    <div class="col col-12">
+                        <hr>
+                    </div>
+
+                    <!-- <p class="text-dark mt-3">Lade Fotos von deinem Führerschein hoch. Je eines von der Vorder- und von der Rückseite <span id="more_info" class="bg-dark text-light px-2 rounded-circle">?</span></p> -->
+                    
+                    <!-- lisence photo (front) -->
+                    <div class="col col-6 custom-file">
+                        <input class="custom-file-input" type="file" name="photo_front" id="photo_front">
+                        <label class="custom-file-label" for="photo_front" data-browse="&#128247;">Foto der Vorderseite des Führerscheins</label>
+                    </div>
+                    
+                    <!-- lisence photo (back) -->
+                    <div class="col col-6 custom-file">
+                        <input class="custom-file-input" type="file" name="photo_back" id="photo_back">
+                        <label class="custom-file-label" for="photo_back" data-browse="&#128247;">Foto der Rückseite des Führerscheins</label>
+                    </div>
+                </section>
+                <!-- END: form fields -->
+                
+                <p><small>* Pfilchtfeld</small><p>
+                <hr>
+                <div class="col-12 d-flex justify-content-end p-0">
+                    <input class="btn btn-warning text-uppercase font-weight-bold" type="submit" value="speichern">
+                </div>
+            </form>
+            </fieldset>
+        </div>
+
+
+    </main>
+
+
+    <!-- botstrap4 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
